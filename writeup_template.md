@@ -81,7 +81,8 @@ Confusion Matrix - Not Confused
 3 of 3 Objects Identified
 ![alt text][image4]
 
-Output_Test1 YAML file included
+Output_1 YAML file included
+
 
 **Test World 2**
 
@@ -91,7 +92,8 @@ Confusion Matrix - Not Confused
 5 of 5 Objects Identified
 ![alt text][image6]
 
-Output_Test2 YAML file included
+Output_2 YAML file included
+
 
 **Test World 3** 
 
@@ -101,5 +103,5 @@ Confusion Matrix - Not Confused
 8 of 8 Objects Identified
 ![alt text][image8]
 
-Output_Test3 YAML file included
+Output_3 YAML file included
 
