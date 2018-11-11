@@ -57,17 +57,15 @@ Utilized Euclidean Clustering to distinguish identified objects for pick & place
 
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 
-'''
+```
 roslaunch sensor_stick training.launch
 rosrun sensor_stick capture_features.py
-'''
-
+```
 Output is training_set.sav file
 
-'''
+```
 rosrun sensor_stick train_svm.py
-'''
-
+```
 Output is Confusion Matrices and model.sav file
 
 
