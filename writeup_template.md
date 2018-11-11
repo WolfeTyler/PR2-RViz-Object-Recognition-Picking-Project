@@ -35,9 +35,6 @@
 [image7]: ./images/test_3_confusionmatrix.png
 [image8]: ./images/test_3_rviz.png
 
-## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
-### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
-
 ---
 ### Writeup / README
 
