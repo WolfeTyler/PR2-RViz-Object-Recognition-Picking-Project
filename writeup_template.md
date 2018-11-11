@@ -4,7 +4,7 @@
 ---
 
 
-# Required Steps for a Passing Submission:
+<!-- # Required Steps for a Passing Submission:
 1. Extract features and train an SVM model on new objects (see `pick_list_*.yaml` in `/pr2_robot/config/` for the list of models you'll be trying to identify). 
 2. Write a ROS node and subscribe to `/pr2/world/points` topic. This topic contains noisy point cloud data that you must work with.
 3. Use filtering and RANSAC plane fitting to isolate the objects of interest from the rest of the scene.
@@ -22,7 +22,18 @@
 10. Create a ROS Client for the “pick_place_routine” rosservice.  In the required steps above, you already created the messages you need to use this service. Checkout the [PickPlace.srv](https://github.com/udacity/RoboND-Perception-Project/tree/master/pr2_robot/srv) file to find out what arguments you must pass to this service.
 11. If everything was done correctly, when you pass the appropriate messages to the `pick_place_routine` service, the selected arm will perform pick and place operation and display trajectory in the RViz window
 12. Place all the objects from your pick list in their respective dropoff box and you have completed the challenge!
-13. Looking for a bigger challenge?  Load up the `challenge.world` scenario and see if you can get your perception pipeline working there!
+13. Looking for a bigger challenge?  Load up the `challenge.world` scenario and see if you can get your perception pipeline working there! -->
+
+[//]: # (Image References)
+
+[image1]: ./images/pcl-pointcloud.png
+[image2]: ./images/pcl-cluster.png
+[image3]: ./images/test_1_confusionmatrix.png
+[image4]: ./images/test_1_rviz.png
+[image5]: ./images/test_2_confusionmatrix.png
+[image6]: ./images/test_2_rviz.png
+[image7]: ./images/test_3_confusionmatrix.png
+[image8]: ./images/test_3_rviz.png
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/1067/view) Points
 ### Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -37,7 +48,15 @@ You're reading it!
 ### Exercise 1, 2 and 3 pipeline implemented
 #### 1. Complete Exercise 1 steps. Pipeline for filtering and RANSAC plane fitting implemented.
 
+Utilized Passthrough and RANSAC filtering on the point-cloud data
+
+![alt text][image1]
+
 #### 2. Complete Exercise 2 steps: Pipeline including clustering for segmentation implemented.  
+
+Utilized Euclidean Clustering to distinguish identified objects for pick & place
+
+![alt text][image2]
 
 #### 2. Complete Exercise 3 Steps.  Features extracted and SVM trained.  Object recognition implemented.
 Here is an example of how to include an image in your writeup.
@@ -48,10 +67,33 @@ Here is an example of how to include an image in your writeup.
 
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 
-And here's another image! 
-![demo-2](https://user-images.githubusercontent.com/20687560/28748286-9f65680e-7468-11e7-83dc-f1a32380b89c.png)
+Test World 1
 
-Spend some time at the end to discuss your code, what techniques you used, what worked and why, where the implementation might fail and how you might improve it if you were going to pursue this project further.  
+Confusion Matrix - Not Confused
+![alt text][image3]
 
+3 of 3 Objects Identified
+![alt text][image4]
 
+Output_Test1 YAML file included
+
+Test World 2
+
+Confusion Matrix - Not Confused
+![alt text][image5]
+
+5 of 5 Objects Identified
+![alt text][image6]
+
+Output_Test2 YAML file included
+
+Test World 3 
+
+Confusion Matrix - Not Confused
+![alt text][image7]
+
+8 of 8 Objects Identified
+![alt text][image8]
+
+Output_Test3 YAML file included
 
